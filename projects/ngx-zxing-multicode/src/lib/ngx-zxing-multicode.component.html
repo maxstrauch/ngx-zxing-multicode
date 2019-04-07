@@ -1,0 +1,9 @@
+<select *ngIf="!hideDeviceSelector" [(ngModel)]="selectedDevice" (change)="onDeviceSelected($event)">
+    <option *ngFor="let device of devices" [value]="device">{{device.label}}</option>
+</select>
+
+<video id="video" [style.object-fit]="previewFitMode">
+    <p>
+        Your browser does not support this feature, please try to upgrade it.
+    </p>
+</video>

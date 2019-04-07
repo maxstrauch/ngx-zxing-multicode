@@ -1,0 +1,8 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/ngx-zxing-multicode",
+  "whitelistedNonPeerDependencies": [ "@types/debug", "@zxing/library", "debug" ],
+  "lib": {
+    "entryFile": "src/public_api.ts"
+  }
+}

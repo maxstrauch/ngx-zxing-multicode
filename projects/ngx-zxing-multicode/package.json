@@ -1,0 +1,34 @@
+{
+  "name": "ngx-zxing-multicode",
+  "version": "1.4.1",
+  "description": "A 1D and 2D barcode scanner using HTML5 video element, built using the ZXing library which is really usable",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxstrauch/ngx-zxing-multicode.git"
+  },
+  "peerDependencies": {
+    "@angular/common": "^7.0.0",
+    "@angular/core": "^7.0.0"
+  },
+  "dependencies": {
+    "@types/debug": "^4.1.3",
+    "@zxing/library": "^0.12.3",
+    "debug": "^4.1.1"
+  },
+  "keywords": [
+    "barcode",
+    "scanner",
+    "zxing",
+    "qr-code",
+    "working",
+    "camera",
+    "webcam",
+    "browser"
+  ],
+  "author": "maxstrauch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maxstrauch/ngx-zxing-multicode/issues"
+  },
+  "homepage": "https://github.com/maxstrauch/ngx-zxing-multicode#readme"
+}
