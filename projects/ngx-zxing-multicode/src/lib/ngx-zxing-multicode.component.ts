@@ -75,6 +75,7 @@ export class NgxZxingMulticodeComponent implements OnInit, OnDestroy {
             .getVideoInputDevices()
             .then(videoInputDevices => {
                 this.devices = videoInputDevices;
+                logger('Found input devices:', this.devices);
 
                 if (!videoInputDevices || videoInputDevices.length < 1) {
                     logger('No media devices found!');
@@ -262,6 +263,32 @@ export class NgxZxingMulticodeComponent implements OnInit, OnDestroy {
 
         logger(`Found barcode:`, result);
         this.detect.emit(result);
+    }
+
+    translateTechnicalCameraName(device: VideoInputDevice): string {
+        if (!device || (typeof device['label']) === 'undefined' || device.label === '') {
+            return 'Camera';
+        }
+
+        const labelLowerCase = device.label.toLocaleLowerCase().trim();
+        if (labelLowerCase.indexOf('front') > -1 || labelLowerCase.indexOf('vorne') > -1) {
+            return 'Camera (front)'; 
+        }
+
+        if (labelLowerCase.indexOf('back') > -1 || labelLowerCase.indexOf('hinten') > -1) {
+            return 'Camera (back)';
+        }
+
+        const match = labelLowerCase.match(/^video.*?source.*?([0-9]+)$/);
+        if (match) {
+            if (this.devices.length < 2) {
+                return 'Camera (built-in)';
+            } else {
+                return `Camera ${match[1]}`;
+            }
+        }
+
+        return device.label || 'Camera';
     }
 
 }

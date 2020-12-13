@@ -1,1 +1,10 @@
-<ngx-zxing-multicode></ngx-zxing-multicode>
+<h1>ngx-zxing-multicode - Test App</h1>
+
+<label for="enable_display">
+    <input type="checkbox" id="enable_display" [checked]="pluginIsShown" (change)="pluginIsShown = !pluginIsShown" />
+</label>
+
+
+<div class="widget-container" *ngIf="pluginIsShown">
+    <ngx-zxing-multicode></ngx-zxing-multicode>
+</div>

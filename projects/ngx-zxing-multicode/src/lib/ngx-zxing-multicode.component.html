@@ -1,5 +1,5 @@
 <select *ngIf="!hideDeviceSelector" [(ngModel)]="selectedDevice" (change)="onDeviceSelected($event)">
-    <option *ngFor="let device of devices" [ngValue]="device">{{device.label}}</option>
+    <option *ngFor="let device of devices" [ngValue]="device">{{translateTechnicalCameraName(device)}}</option>
 </select>
 
 <video id="video" [style.object-fit]="previewFitMode">
