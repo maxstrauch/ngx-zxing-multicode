@@ -145,7 +145,7 @@ export class NgxZxingMulticodeComponent implements OnInit, OnDestroy {
             const luminanceSource = new HTMLCanvasElementLuminanceSource(this.canvas);
             const binaryBitmap = new BinaryBitmap(new HybridBinarizer(luminanceSource));
             try {
-                const result: Result = this.reader.decode(binaryBitmap);
+                const result: Result = this.reader.decode(binaryBitmap as any);
                 if (result && result.getText()) {
                     this.handleScanResult(result);
                 }
