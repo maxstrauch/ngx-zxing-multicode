@@ -1,6 +1,6 @@
 {
   "name": "ngx-zxing-multicode",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "A 1D and 2D barcode scanner using HTML5 video element, built using the ZXing library which is really usable",
   "repository": {
     "type": "git",

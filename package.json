@@ -5,9 +5,9 @@
     "dev": "ng serve --port 6767",
     "dev:ssl": "ng serve --ssl --ssl-key localhost.key --ssl-cert localhost.crt --port 6767 --host 0.0.0.0",
     "gen:sscert": "openssl req -new -x509 -newkey rsa:2048 -sha256 -nodes -keyout localhost.key -days 3560 -out localhost.crt -config certificate.cnf",
-    "build": "cd projects/ngx-zxing-multicode/ && ng build NgxZxingMulticode --prod",
-    "dist": "cd dist/ngx-zxing-multicode && npm publish",
-    "pub": "npm run build && npm run dist"
+    "build:patch": "cd projects/ngx-zxing-multicode/ && npm version patch && ng build NgxZxingMulticode --prod",
+    "dist": "cd dist/ngx-zxing-multicode && cp ../../README.md . && npm publish",
+    "pub:patch": "npm run build:patch && npm run dist"
   },
   "private": true,
   "dependencies": {
