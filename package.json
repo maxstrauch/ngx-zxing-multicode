@@ -6,6 +6,7 @@
     "dev:ssl": "ng serve --ssl --ssl-key localhost.key --ssl-cert localhost.crt --port 6767 --host 0.0.0.0",
     "gen:sscert": "openssl req -new -x509 -newkey rsa:2048 -sha256 -nodes -keyout localhost.key -days 3560 -out localhost.crt -config certificate.cnf",
     "build:patch": "cd projects/ngx-zxing-multicode/ && npm version patch && ng build NgxZxingMulticode --configuration production",
+    "build:minor": "cd projects/ngx-zxing-multicode/ && npm version minor && ng build NgxZxingMulticode --configuration production",
     "dist": "cd dist/ngx-zxing-multicode && cp ../../README.md . && npm publish",
     "pub:patch": "npm run build:patch && npm run dist"
   },
