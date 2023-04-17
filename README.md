@@ -1,3 +1,8 @@
+<H1 align="center">
+    🚧 This project has been discontinued and will not receive further updates. Please don't use it anymore. 🚧
+</H1>
+
+
 ngx-zxing-multicode
 ===
 
